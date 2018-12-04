@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.progress-bar').waypoint(function () {
+                $('.progress-bar').css({
+                    animation: "animate-positive 2s",
+                    opacity: "1"
+                });
+            }, { offset: '75%' });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <a id="section1"></a>
+    <div class="hero">
+        <div class="overlay" style="text-align:center;">
+            <div class="container" style="margin: 0 auto; padding-top: 0px;">
+                <ul class="hero-ul-top" style="padding-inline-start: 0px; text-align: right;">
+                    <li>
+                        <a href="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+                <h1>Leon <span style="color: #582f68">Dmitrović</span></h1>
+                <h2 style="padding-top: 0;">A programmer from Zagreb, Croatia</h2>
+                <ul class="hero-ul" style="padding-inline-start: 0px; text-align: left;">
+                    <li>
+                        <a href="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="overlay-about">
+            <div class="container">
+                <div class="about-img">
+                    <img src="img/me1.jpg" alt="Profile picture">
+                </div>
+                <div class="about-text">
+                    <div class="about-tt">
+                        <h2 style="text-align: left;">Hi, I am
+                            <span>Leon</span>
+                        </h2>
+                    </div>
+                    <p>Resistance is futile. You will be assimilated by the Web!</p>
+                    <p>As you can tell I'm quite a sci-fi fan and that can be easily seen in my
+                        work. I am a computer
+                        science student
+                        from Zagreb with experience in working with several different programming languages and
+                        applications.</p>
+                    <p>If you wish to find out more about me you can download my CV from a link
+                        provided
+                        <a href="#">here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h1 style="padding-top: 0px; margin-top: 0px; padding-bottom: 5vh;">Skills</h1>
+
+            <div class="col-sm-6">
+                <h3 class="progress-title">HTML5</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 90%;">
+                        <div class="progress-value">90%</div>
+                    </div>
+                </div>
+                <h3 class="progress-title">CSS</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 80%;">
+                        <div class="progress-value">80%</div>
+                    </div>
+                </div>
+                <h3 class="progress-title">JS</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+                <h3 class="progress-title">JAVA</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 80%;">
+                        <div class="progress-value">80%</div>
+                    </div>
+                </div>
+                <h3 class="progress-title">ANGULAR</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 70%;">
+                        <div class="progress-value">70%</div>
+                    </div>
+                </div>
+                <h3 class="progress-title">SQL</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="background-color: #34b1c4; width: 85%;">
+                        <div class="progress-value">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h1>Projects</h1>
+
+            <div class="project-items">
+
+                <figure class="project-item">
+                    <div class="cont">
+                        <img src="img/tank-main.jpg" alt="Project image">
+                        <div class="over" onclick="openModal();currentSlide(1)"><span class="text"><img style="height: 10vh; width: auto;"
+                                    src="img/Unity1.png" alt="Project image"></span></div>
+                    </div>
+                    <figcaption>
+                        <h2 class="project-title featured">Stationed tracks</h2>
+                        <p class="project-desc featured">Unty engine multiplayer tank shooter with ephesis on
+                            intractable environment and positioning.
+                            My first experience as a team leader and my first game project that taught me much about
+                            team management and planning.
+                        </p>
+                    </figcaption>
+
+                </figure>
+
+                <div id="myModal" class="modal">
+                    <span class="close cursor" style="padding: 5vh 5vw 95vh 95vw; cursor: default;" onclick="closeModal()"><span
+                            style="cursor: pointer;">&times;</span></span>
+                    <div id="myModalContent" class="modal-content">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <div class="center-flex">
+                                <img src="img/tenk1.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <div class="center-flex">
+                                <iframe class="youtube-video" src="https://www.youtube.com/embed/rK0IBoB3Ir8?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer"" frameborder="
+                                    0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/map1.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/tenk2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                        <div style="width: 100%; height: 100px;">
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            </div>
+                            <div class="column" style="margin-left: 10%; z-index: 1;">
+                                <img class="demo cursor" src="img/tenk1.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide(1)" alt="Map view from north">
+                            </div>
+                            <div class="column" style="z-index: 2;">
+                                <img class="demo cursor" src="/img/video1.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide(2)" alt="Gamplay showcase">
+                            </div>
+                            <div class="column" style="z-index: 3;">
+                                <img class="demo cursor" src="/img/map1.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide(3)" alt="Loading screen">
+                            </div>
+                            <div class="column" style="z-index: 4;">
+                                <img class="demo cursor" src="/img/tenk2.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide(4)" alt="Map view from south">
+                            </div>
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="project-item">
+                    <div class="cont">
+                        <img src="img/movie1.jpg" alt="Project image">
+                        <div class="over" onclick="openModal1();currentSlide1(1)"><span class="text"><img style="height: 20vh; width: auto;"
+                                    src="img/angular1.png" alt="Project image"></span></div>
+                    </div>
+                    <figcaption>
+                        <h2 class="project-title featured">Movie space</h2>
+                        <p class="project-desc featured">My first MEAN Stack RESTful application for discussing
+                            movies.
+                            </br></br>It contains functions as login, admin roles, ability to add new movies and
+                            comment specific movies.
+                        </p>
+                    </figcaption>
+
+                </figure>
+
+                <div id="myModal1" class="modal">
+                    <span class="close cursor" style="padding: 5vh 5vw 95vh 95vw; cursor: default;" onclick="closeModal1()"><span
+                            style="cursor: pointer;">&times;</span></span>
+                    <div id="myModalContent1" class="modal-content">
+                        <div class="mySlides1">
+                            <div class="numbertext">1 / 4</div>
+                            <div class="center-flex">
+                                <img src="img/movie2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides1">
+                            <div class="numbertext">2 / 4</div>
+                            <div class="center-flex">
+                                <img src="img/movie3.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides1">
+                            <div class="numbertext">3 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/movie4.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides1">
+                            <div class="numbertext">4 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/movie5.jpg">
+                            </div>
+                        </div>
+
+                        <div class="caption-container">
+                            <p id="caption1"></p>
+                        </div>
+                        <div style="width: 100%; height: 100px;">
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+                            </div>
+                            <div class="column" style="margin-left: 10%; z-index: 1;">
+                                <img class="demo1 cursor" src="img/movie2.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide1(1)" alt="Movie details and comment section">
+                            </div>
+                            <div class="column" style="z-index: 2;">
+                                <img class="demo1 cursor" src="/img/movie3.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide1(2)" alt="Edit existing movies">
+                            </div>
+                            <div class="column" style="z-index: 3;">
+                                <img class="demo1 cursor" src="/img/movie4.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide1(3)" alt="Account control">
+                            </div>
+                            <div class="column" style="z-index: 4;">
+                                <img class="demo1 cursor" src="/img/movie5.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide1(4)" alt="Register as a new user">
+                            </div>
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <figure class="project-item">
+                    <div class="cont">
+                        <img src="img/carfront.png" alt="Project image">
+                        <div class="over" onclick="openModal2();currentSlide2(1)"><span class="text"><img style="height: 20vh; width: auto;"
+                                    src="img/Android1.png" alt="Project image"></span></div>
+                    </div>
+                    <figcaption>
+                        <h2 class="project-title featured">Car gallery</h2>
+                        <p class="project-desc featured">Android app for browsing car images and setting them as
+                            wallpapers with several other functions as saving images on
+                            mobile device and tracking recently visited images.
+                        </p>
+                    </figcaption>
+
+                </figure>
+
+                <div id="myModal2" class="modal">
+                    <span class="close cursor" style="padding: 5vh 5vw 95vh 95vw; cursor: default;" onclick="closeModal2()"><span
+                            style="cursor: pointer;">&times;</span></span>
+                    <div id="myModalContent2" class="modal-content">
+                        <div class="mySlides2">
+                            <div class="numbertext">1 / 4</div>
+                            <div class="center-flex">
+                                <img src="img/car1.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext">2 / 4</div>
+                            <div class="center-flex">
+                                <img src="img/car2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext">3 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/car3.jpg">
+                            </div>
+                        </div>
+
+                        <div class="mySlides2">
+                            <div class="numbertext">4 / 4</div>
+                            <div class="center-flex">
+                                <img src="/img/car4.jpg">
+                            </div>
+                        </div>
+
+                        <div class="caption-container">
+                            <p id="caption2"></p>
+                        </div>
+                        <div style="width: 100%; height: 100px;">
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                            </div>
+                            <div class="column" style="margin-left: 10%; z-index: 1;">
+                                <img class="demo2 cursor" src="img/car1.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide2(1)" alt="Main menu">
+                            </div>
+                            <div class="column" style="z-index: 2;">
+                                <img class="demo2 cursor" src="/img/car2.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide2(2)" alt="Last opened images">
+                            </div>
+                            <div class="column" style="z-index: 3;">
+                                <img class="demo2 cursor" src="/img/car3.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide2(3)" alt="Car details">
+                            </div>
+                            <div class="column" style="z-index: 4;">
+                                <img class="demo2 cursor" src="/img/car4.jpg" style="max-height: 200px; padding: 0 5px; max-width: 200px;"
+                                    onclick="currentSlide2(4)" alt="Specific brand gallery">
+                            </div>
+                            <div style="width: 10%; max-height: 100px;">
+                                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div style="background-color: rgba(0, 0, 0, 0.7); min-height: 100vh;">
+            <div class="container">
+                <h1 style="text-shadow: 1px 1px 4px rgb(61, 61, 61);">Contact</h1>
+                <div class="contact-con">
+                    <p>If you are looking for a programmer with experience in web design, coding in multiple different
+                        languages and is not afraid to take on new challenges,
+                        feel free to leave me a message by pressing the button below.</p>
+                </div>
+
+                <a href="mailto:leon.dmitrovic@gmail.com" class="mail">Send me a message!</a>
+            </div>
+            <p style="text-align: center; font-size: 1.8em;">Get to know me!</p>
+
+            <div class="social-icons">
+                <a target="_blank" class="social-icon" href="https://www.facebook.com/leon.dmitrovic">
+                    <img src="img/facebook.png" alt="facebook" title="Facebook">
+                </a>
+                <a target="_blank" class="social-icon" href="https://www.instagram.com/leon_dm7/">
+                    <img src="img/instagram.png" alt="instagram" title="Instagram">
+                </a>
+                <a target="_blank" class="social-icon" href="https://twitter.com/Leon_D4">
+                    <img src="img/twitter.png" alt="twitter" title="Twitter">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.height = "100vh";
+            document.getElementById('myModalContent').className = "modal-content mar";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.height = "0vh";
+            document.getElementById('myModalContent').className = "modal-content";
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "inline-block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        }
+
+        //Second modal
+
+        function openModal1() {
+            document.getElementById('myModal1').style.height = "100vh";
+            document.getElementById('myModalContent1').className = "modal-content mar";
+        }
+
+        function closeModal1() {
+            document.getElementById('myModal1').style.height = "0vh";
+            document.getElementById('myModalContent1').className = "modal-content";
+        }
+
+        var slideIndex = 1;
+        showSlides1(slideIndex);
+
+        function plusSlides1(n) {
+            showSlides1(slideIndex += n);
+        }
+
+        function currentSlide1(n) {
+            showSlides1(slideIndex = n);
+        }
+
+        function showSlides1(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides1");
+            var dots = document.getElementsByClassName("demo1");
+            var captionText = document.getElementById("caption1");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "inline-block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+
+        //Third modal
+
+        function openModal2() {
+            document.getElementById('myModal2').style.height = "100vh";
+            document.getElementById('myModalContent2').className = "modal-content mar";
+        }
+
+        function closeModal2() {
+            document.getElementById('myModal2').style.height = "0vh";
+            document.getElementById('myModalContent2').className = "modal-content";
+        }
+
+        var slideIndex = 1;
+        showSlides2(slideIndex);
+
+        function plusSlides2(n) {
+            showSlides2(slideIndex += n);
+        }
+
+        function currentSlide2(n) {
+            showSlides2(slideIndex = n);
+        }
+
+        function showSlides2(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides2");
+            var dots = document.getElementsByClassName("demo2");
+            var captionText = document.getElementById("caption2");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "inline-block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+</body>
+
+</html>
